@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+<title>Gallery 2</title>
+<!-- liitä linkit bootrapin css-määritykseen sekä css-kansion tyyleihin tänne -->
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek-ext'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link type="css/text" rel="css/carousel.css" />
+<link type="css/text" rel="css/lightbox.css" />
+<link type="css/text" rel="css/navbar-fixed-top.css" />
+<link type="css/text" rel="css/omatyyli.css" />
+<style>
+#content {
+	margin: auto;
+	margin-top: 100px;
+	
+}
+
+img{
+  padding: 5px;
+}
+
+img:hover {
+    width: 200px;
+    height: 200px;
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+
+#taulukko {
+	padding: 5px 5px 5px 5px;
+}
+</style>
+<!-- liitä linkit jqueryn kirjastoon ja bootstrapin js-kirjastoon tänne-->
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+
+
+
+<body>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Kuljestus R. Ahti</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+						<li><a href="etusivu.html">Etusivu</a></li>
+					<li><a href="info.html">Info</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-expanded="false">Galleriat
+							<span class="caret"></span>
+					</a> <!-- alasvetovalikkoon tulee linkit gallerioihin -->
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="gallery1.html">Kuljestuskalustomme</a></li>
+							<li><a href="gallery2.html">Uusimmat hankintamme</a></li>
+							<li><a href="gallery3.html">Vanhempaa kalustoa</a></li>
+						</ul></li>
+
+					<li><a href="about.html">Ota yhteyttä</a></li>
+				</ul>
+				<!-- muuta ikonit ja laita linkit facebookiin ja twitteriin -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://facebook.com"><span
+							class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="http://twitter.com"><span
+							class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+ <!-- 2. Galleria -------------------------------->
+      
+      <div class="row featurette" id="content">
+        <div class="col-sm-7">
+        <h2>HISTORIAA</h2>
+			<table id="taulukko">
+				<tr>
+					<td><img src="img/vanha1pieni.jpg" /></td>
+					<td><img src="img/vanha2pieni.jpg" /></td>
+				    <td><img src="img/vanha3pieni.jpg" /></td>
+				</tr>
+
+				<tr>
+					<td><img src="img/vanha4pieni.jpg" /></td>
+					<td><img src="img/vanha5pieni.jpg" /></td>
+				    <td><img src="img/vanha6pieni.jpg" /></td>
+				</tr>
+
+				<tr>
+					<td><img src="img/vanha7pieni.jpg" /></td>
+					<td><img src="img/vanha8pieni.jpg" /></td>
+				    <td><img src="img/vanha9pieni.jpg" /></td>
+				</tr>
+				<tr>
+					<td><img src="img/vanha10pieni.jpg" /></td>
+					<td><img src="img/vanha11pieni.jpg" /></td>
+				    <td><img src="img/vanha12pieni.jpg" /></td>
+				</tr>
+			</table>
+        </div>
+        <div class="col-sm-5">
+          <h2 class="featurette-heading">VANHEMPAA KALUSTOA</h2>
+          <p class="lead">Vanhempi kalustomme on yhä ajokuntoista vaikkakin osa on siirtynyt viettämään eläkepäiviä.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      <script type="text/javascript" src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/lightbox.min.js"></script>
+      
+</body>
+</html>

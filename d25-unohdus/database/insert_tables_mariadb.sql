@@ -1,0 +1,2 @@
+--salasana jukkajukka
+INSERT INTO Kayttajat(email,salasana, suola) VALUES('jukka.juslin@haaga-helia.fi','n1RzOHbgNMWAS7DPeGPVSTBcsTse1B8tWCSn1LTekA8uoy6oLIfD+7RqzsKu4u6Z2lfTsGE+r9Rpe4tvdLFdSw==','OqUrpk7QXQI=');

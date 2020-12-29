@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="classpath*:/*.properties" />
+	<!-- <context:property-placeholder location="classpath*:/mail_config.properties" />   -->
+
+	<bean id="duuniDao" class="vjb.de.vietjob.dao.duuniDAO.DuuniDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="kayttajaDao" class="vjb.de.vietjob.dao.kayttajaDAO.KayttajaDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="alaDao" class="vjb.de.vietjob.dao.alaDAO.AlaDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="ehdokasDao" class="vjb.de.vietjob.dao.ehdokasDAO.EhdokasDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="uutinenDao" class="vjb.de.vietjob.dao.uutinenDAO.UutinenDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="hakemusDao" class="vjb.de.vietjob.dao.hakemusDAO.HakemusDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	<bean id="partneriDao" class="vjb.de.vietjob.dao.partneriDAO.PartneriDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${db.driver}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+	
+	<bean id="applicationMailer" class="vjb.de.vietjob.utils.ApplicationMailer">
+	     <property name="mailSender" ref="mailSender"></property>
+	</bean>
+	 
+        
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+	<property name="host" value="${mailserver.host}"/>
+	<property name="port" value="${mailserver.port}"/>
+	<property name="username" value="${mailserver.username}"/>
+	<property name="password" value="${mailserver.password}"/> 
+	
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+</beans>

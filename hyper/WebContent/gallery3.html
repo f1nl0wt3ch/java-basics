@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+<title>Gallery 3</title>
+<!-- liitä linkit bootrapin css-määritykseen sekä css-kansion tyyleihin tänne -->
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek-ext'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link type="css/text" rel="css/carousel.css" />
+<link type="css/text" rel="css/lightbox.css" />
+<link type="css/text" rel="css/navbar-fixed-top.css" />
+<link type="css/text" rel="css/omatyyli.css" />
+<style>
+#content {
+	margin: auto;
+	margin-top: 100px;
+	margin-left: 20px;
+}
+</style>
+<!-- liitä linkit jqueryn kirjastoon ja bootstrapin js-kirjastoon tänne-->
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+
+</head>
+
+
+<body>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Kuljestus R. Ahti</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="etusivu.html">Etusivu</a></li>
+					<li><a href="info.html">Info</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-expanded="false">Galleriat
+							<span class="caret"></span>
+					</a> <!-- alasvetovalikkoon tulee linkit gallerioihin -->
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="gallery1.html">Kuljestuskalustomme</a></li>
+							<li><a href="gallery2.html">Uusimmat hankintamme</a></li>
+							<li><a href="gallery3.html">Vanhempaa kalustoa</a></li>
+						</ul></li>
+
+					<li><a href="about.html">Ota yhteyttä</a></li>
+				</ul>
+				<!-- muuta ikonit ja laita linkit facebookiin ja twitteriin -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://facebook.com"><span
+							class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					<li><a href="http://twitter.com"><span
+							class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<!-- 3. Galleria -------------------------------->
+
+	<div class="row featurette" id="content">
+		<div class="col-sm-5">
+		
+			<img id="zoom_01" src='img/zoom1pieni.jpg'
+				data-zoom-image="img/zoom1iso.jpg" /> 
+					<script>
+                    $("#zoom_01").elevateZoom({ zoomType : "lens",
+                    lensShape : "round",
+                    lensSize : 200
+                    });
+                    </script>
+
+			<img id="zoom_02"
+				src='img/zoom2pieni.jpg' data-zoom-image="img/zoom2iso.jpg" />
+				<script>
+				$("#zoom_02").elevateZoom({ zoomType : "lens",
+					lensShape : "round",
+					lensSize : 200
+					});
+				</script>
+		</div>
+		<div class="col-sm-7">
+			<h2 class="featurette-heading">Uusimmat Hankintamme</h2>
+			<p class="lead">
+				Modernin kuljestuskalustomme pitää kunnossa omat ammattitaitoiset
+				mekaanikkomme.<br> <br> Seuraamme aktiivisesti alan
+				kehitystä ja pyrimme ottamaan käytäntöön alan uusimmat trendit.<br>
+				<br> Uusi teknologia auttaa kuljestustyön kaikissa vaiheissa
+				lastauksesta purkuun.
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/lightbox.min.js"></script>
+</body>
+</html>

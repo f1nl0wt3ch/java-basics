@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=RaleWay);
+@mixin link {
+    text-decoration: none;
+    background: red;
+}
+@mixin font($font, $size) {
+    font-family: $font;
+    font-size: $size;
+}
+@mixin list ($float,$size) {
+    list-style-type: none;
+    display: inline-block;
+    float: $float;
+    font-size: $size;
+    padding-right: 3px;
+    
+}
+
+@mixin li {
+    display: inline-block;
+    background-color: none;
+    width: 20px;
+    height: 10px;
+}
+$font-family: 'Raleway', sans-serif;
+#search {
+width: 250px;
+}
+
+@mixin a {
+    text-decoration: none;
+    
+    
+}
+
+@mixin hover {
+    background-color: #ddd;
+    text-decoration: none;
+    color: black;
+}
+
+/*** hearder ***/
+.hearder{
+    .logo {
+        p {
+            font-size: 20px;
+            align: left;
+            padding: 5px 10px 5px 5px;
+            border: 1 solid #ddd;
+            p::first-letter {
+                font-size: 30px;
+            }
+        }
+    }
+    .language {
+        
+    }
+    .member {
+        ul {
+            @include list(right, 16px);
+        li {
+            a {
+                @include a;
+                &:hover {@include hover;}
+            }
+            @include li;
+           }
+        }
+    }
+}
+
+/*** menu ***/
+.menu {
+    ul {
+        @include list(left, 18px);
+        
+        li {
+            a {@include a;}
+            @include li;
+        }
+    }
+}
+
+/*** slider ***/
+.slider {
+
+}
+
+/*** main ***/
+.main {
+
+}
+
+/*** footer ***/
+.footer {
+
+}

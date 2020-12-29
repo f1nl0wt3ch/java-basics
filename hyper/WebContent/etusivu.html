@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Etusivu</title>
+ <!-- liitä linkit bootrapin css-määritykseen sekä css-kansion tyyleihin tänne -->
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link type="css/text" rel="css/carousel.css" />
+    <link type="css/text" rel="css/lightbox.css"/>
+    <link type="css/text" rel="css/navbar-fixed-top.css"/>
+    <link type="css/text" rel="css/omatyyli.css" />
+    <!-- liitä linkit jqueryn kirjastoon ja bootstrapin js-kirjastoon tänne-->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/lightbox.min.js"></script>
+<style>
+.container-fixed {
+   padding: 100px 100px 100px 100px;
+}
+</style>
+</head>
+ <body>
+     <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Kuljestus R. Ahti</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            	<li><a href="etusivu.html">Etusivu</a></li>
+					<li><a href="info.html">Info</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-expanded="false">Galleriat
+							<span class="caret"></span>
+					</a> <!-- alasvetovalikkoon tulee linkit gallerioihin -->
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="gallery1.html">Kuljestuskalustomme</a></li>
+							<li><a href="gallery2.html">Uusimmat hankintamme</a></li>
+							<li><a href="gallery3.html">Vanhempaa kalustoa</a></li>
+						</ul></li>
+
+					<li><a href="about.html">Ota yhteyttä</a></li>
+          </ul>
+          <!-- muuta ikonit ja laita linkit facebookiin ja twitteriin -->
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href="http://facebook.com"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+           <li><a href="http://twitter.com"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+         </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+ <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- lisää kuvat, teksti ja linkit -->
+ 
+    <div class="container-fixed">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-sm-4">
+          <img class="img-circle" src="img/rekka1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Info</h2>
+          <p>Tarjoamme luotettavaa kuljetuspalvelua kotimaassa ja ulkomailla. Kulietusalan sopimuksiin kannattaa tutustua etukäteen.</p>
+          <p><a class="btn btn-default" href="#" role="button">Lisätieto &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-sm-4">
+          <img class="img-circle" src="img/rekka2.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Galleriat</h2>
+          <p>Kuvagalleriat esittelevät laadukkaan kiljestustomme. Kokeneet mekaanikkomme pitävät kuljestuskalustostamme hyvää huolta</p>
+          <p><a class="btn btn-default" href="#" role="button">Lisätieto &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-sm-4">
+          <img class="img-circle" src="img/rekka3.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Kiinnostuitko?</h2>
+          <p>Ota meihin yhtetyttä, kerromme mieleillämme lisää. Toimipisteemme sijaitsee Länsi-Pasilassa, Helsingissä, hyvien liikenneyhteyksien päässä.</p>
+          <p><a class="btn btn-default" href="#" role="button">Lisätieto &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      </div>
+
+</body>
+</html>

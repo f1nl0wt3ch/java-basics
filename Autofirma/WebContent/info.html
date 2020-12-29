@@ -1,0 +1,29 @@
+<div ui-content-for="title">
+  <span>Klassikkoinfo</span>
+</div>
+
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="section section-break">
+    <!-- lisää sivulla näkyvät linki Lokinsiipi mersuun ja Jaguariin tähän mallin mukaan -->
+       <a href="" 
+          ui-turn-on="modal1"
+          class="btn btn-default">Lokinsiipi mersu</a>
+      <a href="" 
+          ui-turn-on="modal2"
+          class="btn btn-default">Jaguar</a>
+    </div>
+
+    <div class="section section-break">
+   <!-- lisää infoteksti ja kimin auton kuva tähän -->
+   <p>Lokinsiipimersusta kertova tietoisku avautuu sivun päälle omaan ikkunaan. Jaguarista tietoisku avautuu koko sivun pälle omaan ikkunaan. Ikkunoissa on sulkemispainikkeet.<br><br>
+   Suomalaisväriä automuseossa</p>
+   <img src="img/kimi.jpg">
+    </div>
+  </div>
+</div>
+<!-- lisää modals-tiedostonimet mallin mukaan eli mersu.html ja jaguar.html tähän-->
+<div ui-content-for="modals">
+  <div ng-include="'mersu.html'"></div>
+  <div ng-include="'jaguar.html'"></div>
+</div>

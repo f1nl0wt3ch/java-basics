@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_11]"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/activation.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/javax.servlet.jsp.jstl-1.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/javax.servlet.jsp.jstl-1.2.2.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/javax.servlet.jsp.jstl-api-1.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/jdbc-local-1.0.0.final-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/jstl.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/junit.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/mail.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/mariadb-java-client-1.1.7.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/mysql.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/standard.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/taglibs-standard-impl-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/Users/dinhthinh/Documents/Java EE/jars/taglibs-standard-jstlel-1.2.1.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

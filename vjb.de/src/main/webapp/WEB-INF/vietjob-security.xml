@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security.xsd">
+
+   <import resource="vietjob-data.xml"/>
+
+	<!-- Begin Spring security config -->
+	<sec:http auto-config="true" use-expressions="true">
+		<sec:intercept-url pattern="/secure/admin/**" access="hasRole('ROLE_YLLAPITAJA')" />
+		<sec:intercept-url pattern="/secure/employee/**" access="hasRole('ROLE_EHDOKAS')" />
+		<sec:intercept-url pattern="/secure/hakemus/*" access="hasRole('ROLE_EHDOKAS')" />
+		<sec:intercept-url pattern="/secure/partner/**" access="hasRole('ROLE_PARTNERI')" />
+		<sec:intercept-url pattern="/secure" access="isAuthenticated()" />
+		<sec:intercept-url pattern="/lomake" access="isAuthenticated()" />
+		<!-- <sec:intercept-url pattern="/*" access="permitAll" /> -->
+
+		<sec:form-login login-page="/login.do"
+			default-target-url="/public" 
+			authentication-failure-url="/loginfail"
+			username-parameter="tunnus"
+			password-parameter="salasana" 
+			login-processing-url="/tarkastus" />
+		<sec:logout logout-success-url="/logout" />
+		<sec:csrf disabled="true"/>
+		<sec:remember-me key="vietjobKey" token-validity-seconds="2419200" />
+	</sec:http>
+	
+	<bean id="encoder"
+		class="org.springframework.security.crypto.password.StandardPasswordEncoder" />
+	<sec:authentication-manager>
+		<sec:authentication-provider>
+			<sec:password-encoder ref="encoder" />
+			<sec:jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="select kayttaja_tunnus, kayttaja_salasana_encrypted, kayttaja_enabled from kayttaja where kayttaja_tunnus=? and kayttaja_enabled = 1"
+				authorities-by-username-query="select k.kayttaja_tunnus, r.rooli_nimi from kayttaja as k, rooli as r, kayttaja_rooli as kr where k.kayttaja_id = kr.fk_kayttaja_id and r.rooli_id = kr.fk_rooli_id and k.kayttaja_tunnus=?  " />
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+
+	<sec:global-method-security
+		pre-post-annotations="enabled" />
+
+	<!-- End Spring security config -->
+
+</beans>

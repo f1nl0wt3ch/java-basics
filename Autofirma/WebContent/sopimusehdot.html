@@ -1,0 +1,45 @@
+<div ui-content-for="title">
+  <span>Sopimusehdot</span>
+</div>
+
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="section">
+    <img src="img/banneri2.jpg">
+      <div class="panel-group"        
+        ui-state='myAccordion' 
+        ui-default='1'>
+
+        <div class="panel panel-default" ng-repeat="i in [1,2,3]">
+          <div class="panel-heading" ui-set="{'myAccordion': i}">
+        
+            <h4 class="panel-title">
+                Sopimusehdot {{i}}
+            </h4>
+          
+          </div>
+
+          <div ui-if="myAccordion == {{i}}">
+            <div class="panel-body">
+                <!-- lisää haitarimallin tekstit tähän -->
+                <div ui-if="myAccordion == 1">
+                <p>Edullista ja laadukasta autonvuokrausta. Autonvuokraus Tiko Rentistä on yksinkertaista, edullista ja helppoa. Saat tarjouksen vuokra-
+                autosta haluamallesi ajankohdalle. Valitse haluamasi vuokra-auto ja vuokra-aika. Saat tarjouksen nopeasti ja voit varata auton samantien.</p>
+                </div>
+                <div ui-if="myAccordion == 2">
+                <p>Vuokraamossa esität luottokorttisi sekä ajokorttisi. Edellytämme, että vuokrauksen alkaessa ajokorttisi on ollut voimassa vähintään vuoden. Jos kuljettajia on useampia, kaikkia kuljettajia pyydetään esittämään ajokorttinsa autoa noudettaessa. Kuljettajan minimi-ikä vaihtelee maittain, yleensä 21-23 vuotta.</p>
+                </div>
+                <div ui-if="myAccordion == 3">
+                <p>Vuokraaja on velvollinen huolehtimaan autosta yhtä hyvin kuin huolellinen henkilö omastaan sekä noudattamaan ajaessaan erityistä huolellisuutta ja varovaisutta. Vuokraaja sitoutuu itse kuljettamaan autoa. Hän saa luovuttaa auton toiselle tai toisen kuljetettavaksi vain, jos vuokrasopimukseen on erikseen merkitty lupa siihen (lisäkuljettaja)</p>
+                </div>
+             </div>
+          </div>
+          
+       
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</div>

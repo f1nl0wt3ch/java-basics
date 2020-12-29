@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=RaleWay);
+#search {
+  width: 250px; }
+
+/*** hearder ***/
+.hearder .logo p {
+  font-size: 20px;
+  align: left;
+  padding: 5px 10px 5px 5px;
+  border: 1 solid #ddd; }
+  .hearder .logo p p::first-letter {
+    font-size: 30px; }
+.hearder .member ul {
+  list-style-type: none;
+  display: inline-block;
+  float: right;
+  font-size: 16px;
+  padding-right: 3px; }
+  .hearder .member ul li {
+    display: inline-block;
+    background-color: none;
+    width: 20px;
+    height: 10px; }
+    .hearder .member ul li a {
+      text-decoration: none; }
+      .hearder .member ul li a:hover {
+        background-color: #ddd;
+        text-decoration: none;
+        color: black; }
+
+/*** menu ***/
+.menu ul {
+  list-style-type: none;
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+  padding-right: 3px; }
+  .menu ul li {
+    display: inline-block;
+    background-color: none;
+    width: 20px;
+    height: 10px; }
+    .menu ul li a {
+      text-decoration: none; }
+
+/*** slider ***/
+/*** main ***/
+/*** footer ***/
